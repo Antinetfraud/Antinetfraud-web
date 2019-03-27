@@ -1,0 +1,52 @@
+/*————————————footer样式————————————————*/
+footer{
+    background-color: #FFFFFF;
+}
+
+.footer-button{
+    background-color: #00cddf;
+    display: block;
+    width: 150px;
+    height: 40px;
+    border: 2px solid white;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 20px auto;
+    font-size: 1.1em;
+    outline:none;
+}
+.footer-app{
+    background-color: #00cddf;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+@media (max-width:992px){
+  .footer-app{height: 200px;}
+}
+
+.footer-link{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: gray;
+    max-width:880px;
+}
+.footer-link a{
+    color: gray;
+}
+
+footer .col-md-4 p {
+    font-size: 16px;
+    color: #00bdd0;
+}
+
+.modal-title{
+    display: block;
+    width: 80%;
+    text-indent: 0em;
+    margin:5px auto 0;
+}

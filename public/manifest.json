@@ -1,0 +1,15 @@
+{
+  "short_name": "案例网",
+  "name": "案例网 PWA App",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "400x400",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}

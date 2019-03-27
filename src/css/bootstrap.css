@@ -1,0 +1,59 @@
+/* bootstrap css rewrite */
+
+.panel-default>.panel-heading {
+  background-color: #FFFFFF;
+}
+
+/*—————————bootstrap导航栏修改—————————————*/
+.navbar-default {
+  background-color: #FFFFFF;
+}
+
+.dropdown-menu {min-width: 50px;}
+
+@media (min-width: 1240px){
+  .nav>li>a {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 1240px){
+  .nav>li>a {
+    padding: 10px 8px;
+  }
+}
+
+/*—————————bootstrap模态框修改—————————————*/
+
+.modal-header {
+  border-bottom: 0px solid #e5e5e5; 
+}
+
+.modal-footer {
+  border-top: 0px solid #e5e5e5;
+}
+
+/*————————bootstrap轮播图样式微调——————————*/
+.slide-height{
+  height: auto;
+}
+
+.rsaquo{
+  position:relative;
+  top:45%;
+  font-size: 30px;
+}
+
+@media (max-width: 767px){
+  .rsaquo{
+    font-size: 20px;
+  }
+}
+
+.carousel-control.right {
+  background-image: none;
+}
+
+.carousel-control.left {
+  background-image: none;
+}
