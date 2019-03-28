@@ -35,9 +35,9 @@ class ShowByTag extends React.Component {
     let url = window.location.href;
     let page = this.getParams(url, 'page');
     if (page === null) {
-      getArticles('/article/tag/' + this.props.match.params.id);
+      getArticles('/article/tag/' + this.props.match.params.id)();
     } else {
-      getArticles('/article/tag/' + this.props.match.params.id, page);
+      getArticles('/article/tag/' + this.props.match.params.id, page)();
     }
   }
 
@@ -51,9 +51,9 @@ class ShowByTag extends React.Component {
         path = url.substr(0, url.indexOf('?'));
       }
       if (page === null) {
-        getArticles(path);
+        getArticles(path)();
       } else {
-        getArticles(path, page);
+        getArticles(path, page)();
       }
       this.setState({ url: url });
     }

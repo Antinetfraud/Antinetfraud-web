@@ -1,6 +1,3 @@
-import axios from 'axios';
-import { api } from '../functions/api';
-import { store } from '../reducers';
 
 export const setArticles = (articles, title) => {
   return {

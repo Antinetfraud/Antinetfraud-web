@@ -18,7 +18,6 @@ export default function getArticles (url, page = 1) {
   }
 
   return async dispatch => {
-    console.log('get_article')
     try {
       store.dispatch(setCode(100));
       document.body.scrollTop = document.documentElement.scrollTop = 0;

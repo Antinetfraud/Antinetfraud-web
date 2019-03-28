@@ -16,7 +16,7 @@ class Pagination extends React.Component {
   }
 
   handleClick(i) {
-    getArticles(this.props.url, i);
+    getArticles(this.props.url, i)();
   }
 
   show() {

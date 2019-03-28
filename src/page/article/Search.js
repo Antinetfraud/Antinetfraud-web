@@ -34,12 +34,13 @@ class Search extends React.Component {
   }
 
   componentWillMount() {
+    console.log(this.props.match.params)
     let url = window.location.href;
     let page = this.getParams(url, 'page');
     if (page === null) {
-      getArticles('/article/search/' + this.props.match.params.keywords);
+      getArticles('/article/search/' + this.props.match.params.keywords)();
     } else {
-      getArticles('/article/search/' + this.props.match.params.keywords, page);
+      getArticles('/article/search/' + this.props.match.params.keywords, page)();
     }
   }
 
@@ -52,9 +53,9 @@ class Search extends React.Component {
         path = url.substr(0, url.indexOf('?'));
       }
       if (page === null) {
-        getArticles(path);
+        getArticles(path)();
       } else {
-        getArticles(path, page);
+        getArticles(path, page)();
       }
       this.setState({ url: url });
     }

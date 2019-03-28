@@ -39,7 +39,6 @@ class Home extends React.Component {
     if (url === '/') {
 
     } else if (this.state.url !== url) {
-      //console.log(this.state.url, url);
       let page = getParams(url, 'page');
       let path = nextProps.location.pathname;
 
@@ -49,9 +48,9 @@ class Home extends React.Component {
 
       if (path === "/article/all/") {
         if (page === null) {
-          getArticles("/article/all/");
+          getArticles("/article/all/")();
         } else {
-          getArticles("/article/all/", page);
+          getArticles("/article/all/", page)();
         }
         this.setState({ url: url });
       }
