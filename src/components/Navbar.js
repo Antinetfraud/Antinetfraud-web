@@ -30,7 +30,7 @@ class Navbar extends React.Component {
     let width = document.documentElement.clientWidth;
     if (width < 768) {
       //react是数据驱动的框架，不推荐直接操作dom。
-      //直接操作dom虽然可以实现功能，不过不利于维护，而且性能不是最优。
+      //直接操作dom虽然可以实现功能，不过不利于维护。
       //不过先修复这个页面跳转navbar不收回的bug先，剩下的优化以后有空再说
       document.getElementById("bs-example-navbar-collapse-1").className = "collapse navbar-collapse";
 
@@ -154,7 +154,8 @@ class Navbar extends React.Component {
                   </ul>
                 </li>
 
-                <li><Link to="/">案例测试</Link></li>
+                <li><Link to="/">科普答题</Link></li>
+                <li><Link to="/video">科普视频</Link></li>
                 <li><Link to="/contribution">分享经历</Link></li>
                 <li><Link to="/notice/show/1">关于我们</Link></li>
                 <li><Link to="#" onClick={this.openModal}>搜索</Link></li>

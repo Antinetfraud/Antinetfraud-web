@@ -24,6 +24,7 @@ import { Home as Auth } from './page/auth/Home.js';
 import { Info } from './page/auth/Info.js';
 import { Collection } from './page/auth/Collection.js';
 import { History } from './page/auth/History.js';
+import { Video } from './page/Video.js';
 
 
 
@@ -39,11 +40,12 @@ const Main = () => (
         <Route path="/article/show/:id" component={ArticleShow} />
         <Route path="/article/search/:keywords" component={Search} />
 
+        <Route path="/video" component={Video} />
         <Route path="/notice/show/:id" component={Notice} />
         <Route path="/contribution" component={Contribution} />
+
         <Route path="/login" component={Login} />
         <Route path="/register" component={Register} />
-
         <Route path="/auth/info" component={Info} />
         <Route path="/auth/collection" component={Collection} />
         <Route path="/auth/history" component={History} />
