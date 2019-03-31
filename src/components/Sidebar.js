@@ -15,8 +15,8 @@ class Sidebar extends React.Component {
     this.state = {
       articles: {}, code: '404', notices: {}, nCode: '404',
     };
-
   };
+
   componentWillMount() {
     this.getDate();
   };
@@ -45,47 +45,40 @@ class Sidebar extends React.Component {
       return (<Spinner />);
     } else {
       let result = [];
-      let length = this.state.notices.data.length;
-      for (let i = 0; i < length; i++) {
-        result.push(this.renderNoticeList(i))
-      }
+      let notices = this.state.notices.data
+      notices.map(notice => result.push((
+        <Link to={"/notice/show/" + notice.id} key={notice.id}>
+          <li>{notice.title}</li>
+        </Link>
+      )))
       return (<ul style={{ paddingLeft: '10px' }}>{result}</ul>);
     }
   }
-
-  renderNoticeList(i) {
-    return (
-      <Link to={"/notice/show/" + this.state.notices.data[i].id} key={this.state.notices.data[i].id}>
-        <li>{this.state.notices.data[i].title}</li>
-      </Link>
-    );
-  };
 
   showHotList() {
     if (this.state.code === '404') {
       return (<Spinner />);
     } else {
       let result = [];
-      for (let i = 0; i < 4; i++) {
-        result.push(this.renderHotList(i))
-      }
+      let articles = this.state.articles.data
+      articles.map(
+        article => result.push(this.renderHotList(article))
+      )
       return (<div>{result}</div>);
     }
   };
 
-  renderHotList(i) {
+  renderHotList(article) {
     return (
-      <Link to={"/article/show/" + this.state.articles.data[i].id} key={this.state.articles.data[i].id}>
+      <Link to={"/article/show/" + article.id} key={article.id}>
         <div className="hot-item" >
           <div className="col-md-4">
-            <img src={img(this.state.articles.data[i].image)}
-              alt={this.state.articles.data[i].title}
-            />
+            <img src={img(article.image)}alt={article.title}/>
           </div>
           <div className="col-md-8">
-            <p className="title">{this.state.articles.data[i].title}</p>
-            <p className="subhead">{this.state.articles.data[i].tag_name}</p>
-            <p className="subhead">{this.state.articles.data[i].created_at}</p>
+            <p className="title">{article.title}</p>
+            <p className="subhead">{article.tag_name}</p>
+            <p className="subhead">{article.created_at}</p>
           </div>
         </div>
       </Link>

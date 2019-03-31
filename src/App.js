@@ -25,6 +25,7 @@ import { Info } from './page/auth/Info.js';
 import { Collection } from './page/auth/Collection.js';
 import { History } from './page/auth/History.js';
 import { Video } from './page/Video.js';
+import { Question } from './page/Question.js';
 
 
 
@@ -41,6 +42,7 @@ const Main = () => (
         <Route path="/article/search/:keywords" component={Search} />
 
         <Route path="/video" component={Video} />
+        <Route path="/question" component={Question} />
         <Route path="/notice/show/:id" component={Notice} />
         <Route path="/contribution" component={Contribution} />
 

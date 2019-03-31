@@ -154,7 +154,7 @@ class Navbar extends React.Component {
                   </ul>
                 </li>
 
-                <li><Link to="/">科普答题</Link></li>
+                <li><Link to="/question">科普答题</Link></li>
                 <li><Link to="/video">科普视频</Link></li>
                 <li><Link to="/contribution">分享经历</Link></li>
                 <li><Link to="/notice/show/1">关于我们</Link></li>
